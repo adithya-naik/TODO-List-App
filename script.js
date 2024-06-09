@@ -41,10 +41,9 @@ function display(){
 function check(){
     if(todoList.length == 0){
         let spanElement = document.querySelector('span');
-        let newHTMl = '';
-        // newHTMl += spanElement.innerHTML;
         newHTMl =`
-        <img src="images/Screenshot 2024-06-09 123457.png" alt="NO TASKS">
+        <img src="images/No-Tasks.gif" alt="No-Tasks">
+        <p class = "no-tasks-heading" >No Tasks to do...</p>
         `
     
         document.querySelector('span').innerHTML = newHTMl;
