@@ -5,20 +5,23 @@ body{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #7554;
+    background-color:whitesmoke;
 }
 .main-heading{
     text-align: center;
 }
 .show-container, .input-box{
     display: grid;
-    grid-template-columns: 200px 150px 100px;
+    grid-template-columns: 200px 150px 150px 100px;
     align-items: center;
     column-gap: 20px;
     row-gap: 10px;
     margin: 20px;
 }
-.todo-date{
+.todo-input{
+    cursor: text;
+}
+.todo-time, .todo-date{
     cursor: pointer;
 }
 .btn{
@@ -31,6 +34,9 @@ body{
 }
 .input{
     font-size: large;
+    border: none;
+    border-radius: 10px;
+    background-color: wheat;
     padding: 5px 10px;
 }
 .btn-add{
@@ -38,4 +44,7 @@ body{
 }
 .btn-del{
     background-color: red;
+}
+.no-tasks img{
+    width: fit-content;
 }
