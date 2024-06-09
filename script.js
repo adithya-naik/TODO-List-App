@@ -10,14 +10,14 @@ function add(){
     let timeElement = document.querySelector('.todo-time');
     let inputTime = timeElement.value; 
 
-    let paraElement = document.querySelector('span');
+    let spanElement = document.querySelector('span');
 
     todoList.push({item : inputText , dueDate : inputDate , dueTime : inputTime});
 
     inputElement.value= '';
     dateElement.value = "";
     timeElement.value = "";
-    paraElement.innerText = '' ;
+    spanElement.innerHTML= '' ;
     
     display()
 }
