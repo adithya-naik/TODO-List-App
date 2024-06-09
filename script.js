@@ -1,5 +1,5 @@
 let todoList = [];
-
+check();
 function add(){
     let inputElement = document.querySelector('.todo-input');
     let inputText = inputElement.value; 
@@ -31,9 +31,23 @@ function display(){
         <span>${item}</span>
         <span>${dueDate}</span>
         <span>${dueTime}</span>
-        <button class = "btn-del btn" onclick = "todoList.splice(${i},1); display();">Delete</button>
+        <button class = "btn-del btn" onclick = "todoList.splice(${i},1); display(); check();">Delete</button>
         `
     }
     containerElement.innerHTML = newHTMl;
 
+}
+
+function check(){
+    if(todoList.length == 0){
+        let spanElement = document.querySelector('span');
+        let newHTMl = '';
+        // newHTMl += spanElement.innerHTML;
+        newHTMl =`
+        <img src="images/Screenshot 2024-06-09 123457.png" alt="NO TASKS">
+        `
+    
+        document.querySelector('span').innerHTML = newHTMl;
+    
+    }
 }
